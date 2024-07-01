@@ -6,6 +6,10 @@ MAX_KEY_LENGTH = 8
 
 
 def encrypt(text):
+    """
+    :param text:
+    :return:
+    """
     key_ = ""
     length = random.randint(MIN_KEY_LENGTH, MAX_KEY_LENGTH)
     for i in range(0, length):
@@ -22,6 +26,11 @@ def encrypt(text):
 
 
 def decrypt(encrypted_text_, key_):
+    """
+    :param encrypted_text_:
+    :param key_:
+    :return:
+    """
     decrypted_text_ = ""
     counter = 0
 
