@@ -3,7 +3,7 @@ import random
 ascii_lowercase = 'abcdefghijklmnopqrstuvwxyz'
 ascii_uppercase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
 digits = '0123456789'
-ascii_ = ascii_lowercase + ascii_uppercase + digits
+ASCII_ = ascii_lowercase + ascii_uppercase + digits
 
 MIN_KEY_LENGTH = 4
 MAX_KEY_LENGTH = 8
@@ -17,7 +17,7 @@ def encrypt(text):
     key_ = ""
     length = random.randint(MIN_KEY_LENGTH, MAX_KEY_LENGTH)
     for i in range(0, length):
-        key_ += ascii_[random.randint(0, len(ascii_) - 1)]
+        key_ += ASCII_[random.randint(0, len(ASCII_) - 1)]
     counter = 0
     encrypted_text_ = ""
 
@@ -48,8 +48,8 @@ def decrypt(encrypted_text_, key_):
 
 encrypted_text, key = encrypt("Hello world!")
 
-encrypted_text = "«¥¥Õk½¨«Ò¯g"
-key = "KF99f"
+# encrypted_text = "«¥¥Õk½¨«Ò¯g"
+# key = "KF99f"
 
 decrypted_text = decrypt(encrypted_text, key)
 
